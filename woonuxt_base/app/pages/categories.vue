@@ -1,6 +1,9 @@
 <script lang="ts" setup>
-const { data } = await useAsyncGql('getProductCategories');
-const productCategories = data.value.productCategories?.nodes as ProductCategory[];
+import dataJson from "./data.json";
+const { data } =  dataJson;
+
+console.log(data)
+const productCategories = data.productCategories?.nodes as ProductCategory[];
 
 useHead({
   title: `Categories`,

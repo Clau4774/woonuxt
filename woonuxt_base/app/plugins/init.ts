@@ -3,7 +3,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     const { storeSettings } = useAppConfig();
     const { clearAllCookies, clearAllLocalStorage } = useHelpers();
     const sessionToken = useCookie('woocommerce-session');
-    if (sessionToken.value) useGqlHeaders({ 'woocommerce-session': `Session ${sessionToken.value}` });
+    //if (sessionToken.value) useGqlHeaders({ 'woocommerce-session': `Session ${sessionToken.value}` });
 
     // Wait for the user to interact with the page before refreshing the cart, this is helpful to prevent excessive requests to the server
     let initialised = false;
@@ -23,14 +23,14 @@ export default defineNuxtPlugin(async (nuxtApp) => {
       const { refreshCart } = useCart();
       const success: boolean = await refreshCart();
 
-      useGqlError((err: any) => {
-        const serverErrors = ['The iss do not match with this server', 'Invalid session token'];
-        if (serverErrors.includes(err?.gqlErrors?.[0]?.message)) {
-          clearAllCookies();
-          clearAllLocalStorage();
-          window.location.reload();
-        }
-      });
+      // useGqlError((err: any) => {
+      //   const serverErrors = ['The iss do not match with this server', 'Invalid session token'];
+      //   if (serverErrors.includes(err?.gqlErrors?.[0]?.message)) {
+      //     clearAllCookies();
+      //     clearAllLocalStorage();
+      //     window.location.reload();
+      //   }
+      // });
 
       if (!success) {
         clearAllCookies();

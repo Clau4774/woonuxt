@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { StockStatusEnum, ProductTypesEnum, type AddToCartInput } from '#woo';
+
 
 const route = useRoute();
 const { storeSettings } = useAppConfig();
@@ -8,30 +8,179 @@ const { addToCart, isUpdatingCart } = useCart();
 const { t } = useI18n();
 const slug = route.params.slug as string;
 
-const { data } = await useAsyncGql('getProduct', { slug });
-if (!data.value?.product) {
+const { data } = {
+  "data": {
+    "product": {
+      "name": "Teléfono Inteligente",
+      "type": "VARIABLE",
+      "databaseId": 102,
+      "id": "cHJvZHVjdDoxMDI=",
+      "metaData": [
+        {
+          "id": 1,
+          "key": "_wc_average_rating",
+          "value": "4.8"
+        },
+        {
+          "id": 2,
+          "key": "_wc_review_count",
+          "value": "25"
+        }
+      ],
+      "slug": "telefono-inteligente",
+      "sku": "TEL-INT-102",
+      "description": "<p>Un teléfono inteligente de última generación con múltiples características.</p>",
+      "rawDescription": "Un teléfono inteligente de última generación con múltiples características.",
+      "shortDescription": "<p>Teléfono inteligente con pantalla OLED y cámara de alta resolución.</p>",
+      "attributes": {
+        "nodes": [
+          {
+            "variation": true,
+            "name": "Capacidad",
+            "id": "YXR0cmlidXRlOjE=",
+            "options": ["64GB", "128GB"],
+            "label": "Capacidad",
+            "scope": "global",
+            "slug": "capacidad",
+            "terms": {
+              "nodes": [
+                {
+                  "name": "64GB",
+                  "slug": "64gb",
+                  "taxonomyName": "pa_capacidad",
+                  "databaseId": 201
+                },
+                {
+                  "name": "128GB",
+                  "slug": "128gb",
+                  "taxonomyName": "pa_capacidad",
+                  "databaseId": 202
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "productCategories": [
+        {
+          "name": "Electrónicos",
+          "slug": "electronicos"
+        }
+      ],
+      "terms": [
+        {
+          "taxonomyName": "Etiqueta",
+          "name": "Oferta",
+          "slug": "oferta",
+          "count": 120
+        }
+      ],
+      "price": "299.99",
+      "regularPrice": "349.99",
+      "salePrice": "299.99",
+      "onSale": true,
+      "variations": [
+        {
+          "id": "cHJvZHVjdFZhcmlhdGlvbjoxMDIwMQ==",
+          "name": "Teléfono Inteligente - 64GB",
+          "price": "299.99"
+        },
+        {
+          "id": "cHJvZHVjdFZhcmlhdGlvbjoxMDIwMg==",
+          "name": "Teléfono Inteligente - 128GB",
+          "price": "349.99"
+        }
+      ],
+      "related": {
+        "nodes": [
+          {
+            "name": "Auriculares Inalámbricos",
+            "type": "SIMPLE",
+            "databaseId": 103,
+            "id": "cHJvZHVjdDoxMDM=",
+            "price": "59.99",
+            "regularPrice": "79.99",
+            "salePrice": "59.99",
+            "onSale": true
+          },
+          {
+            "name": "Cargador Rápido",
+            "type": "SIMPLE",
+            "databaseId": 104,
+            "id": "cHJvZHVjdDoxMDQ=",
+            "price": "19.99",
+            "regularPrice": "24.99",
+            "salePrice": "19.99",
+            "onSale": true
+          }
+          // Puedes agregar más productos relacionados si lo deseas
+        ]
+      },
+      "reviews": {
+        "averageRating": "4.8",
+        "edges": [
+          {
+            "rating": 5,
+            "node": {
+              "content": "Excelente teléfono, muy rápido y con buena batería.",
+              "id": "Y29tbWVudDox",
+              "date": "2023-10-01",
+              "author": {
+                "node": {
+                  "name": "Juan Pérez",
+                  "avatar": {
+                    "url": "https://ejemplo.com/avatar/juanperez.jpg"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "rating": 4,
+            "node": {
+              "content": "Buena relación calidad-precio.",
+              "id": "Y29tbWVudDoy",
+              "date": "2023-09-25",
+              "author": {
+                "node": {
+                  "name": "María Gómez",
+                  "avatar": {
+                    "url": "https://ejemplo.com/avatar/mariagomez.jpg"
+                  }
+                }
+              }
+            }
+          }
+          // Puedes agregar más reseñas si lo deseas
+        ]
+      }
+    }
+  }
+}
+
+if (!data.product) {
   throw showError({ statusCode: 404, statusMessage: t('messages.shop.productNotFound') });
 }
 
-const product = ref<Product>(data?.value?.product);
+const product = ref<Product>(data?.product);
 const quantity = ref<number>(1);
 const activeVariation = ref<Variation | null>(null);
 const variation = ref<VariationAttribute[]>([]);
-const indexOfTypeAny = computed<number[]>(() => checkForVariationTypeOfAny(product.value));
+const indexOfTypeAny = computed<number[]>(() => checkForVariationTypeOfAny(product));
 const attrValues = ref();
-const isSimpleProduct = computed<boolean>(() => product.value?.type === ProductTypesEnum.SIMPLE);
-const isVariableProduct = computed<boolean>(() => product.value?.type === ProductTypesEnum.VARIABLE);
-const isExternalProduct = computed<boolean>(() => product.value?.type === ProductTypesEnum.EXTERNAL);
+const isSimpleProduct = computed<boolean>(() => product.type === "SIMPLE");
+const isVariableProduct = computed<boolean>(() => product.type === "VARIABLE");
+const isExternalProduct = computed<boolean>(() => product.type === "EXTERNAL");
 
-const type = computed(() => activeVariation.value || product.value);
-const selectProductInput = computed<any>(() => ({ productId: type.value?.databaseId, quantity: quantity.value })) as ComputedRef<AddToCartInput>;
+const type = computed(() => activeVariation.value || product);
+const selectProductInput = computed<any>(() => ({ productId: type.databaseId, quantity: quantity.value })) as ComputedRef<AddToCartInput>;
 
 const mergeLiveStockStatus = (payload: Product): void => {
-  product.value.stockStatus = payload.stockStatus ?? product.value?.stockStatus;
+  product.stockStatus = payload.stockStatus ?? product.stockStatus;
 
   payload.variations?.nodes?.forEach((variation: Variation, index: number) => {
-    if (product.value?.variations?.nodes[index]) {
-      product.value.variations.nodes[index].stockStatus = variation.stockStatus;
+    if (product.variations?.nodes[index]) {
+      product.variations.nodes[index].stockStatus = variation.stockStatus;
     }
   });
 };
@@ -62,18 +211,18 @@ const updateSelectedVariations = (variations: VariationAttribute[]): void => {
   });
 
   if (getActiveVariation[0]) activeVariation.value = getActiveVariation[0];
-  selectProductInput.value.variationId = activeVariation.value?.databaseId ?? null;
+  selectProductInput.value.variationId = activeVariation.databaseId ?? null;
   selectProductInput.value.variation = activeVariation.value ? attrValues.value : null;
   variation.value = variations;
 };
 
 const stockStatus = computed(() => {
-  if (isVariableProduct.value) return activeVariation.value?.stockStatus || StockStatusEnum.OUT_OF_STOCK;
-  return type.value?.stockStatus || StockStatusEnum.OUT_OF_STOCK;
+  if (isVariableProduct.value) return activeVariation.stockStatus || "OUT_OF_STOCK";
+  return type.stockStatus || "OUT_OF_STOCK";
 });
 const disabledAddToCart = computed(() => {
-  if (isSimpleProduct.value) return !type.value || stockStatus.value === StockStatusEnum.OUT_OF_STOCK || isUpdatingCart.value;
-  return !type.value || stockStatus.value === StockStatusEnum.OUT_OF_STOCK || !activeVariation.value || isUpdatingCart.value;
+  if (isSimpleProduct.value) return !type.value || stockStatus.value === "OUT_OF_STOCK" || isUpdatingCart.value;
+  return !type.value || stockStatus.value === "OUT_OF_STOCK" || !activeVariation.value || isUpdatingCart.value;
 });
 </script>
 

@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import dataJson from "./data.json";
 const { setProducts, updateProductList } = useProducts();
 const route = useRoute();
 const { storeSettings } = useAppConfig();
 const { isQueryEmpty } = useHelpers();
 
-const { data } = await useAsyncGql('getProducts');
-const allProducts = (data.value?.products?.nodes || []) as Product[];
+const { data } = dataJson
+const allProducts = (data.products?.nodes || []) as Product[];
 setProducts(allProducts);
 
 onMounted(() => {

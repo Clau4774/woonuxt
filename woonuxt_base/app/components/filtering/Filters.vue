@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TaxonomyEnum } from '#woo';
+
 
 const { isFiltersActive } = useFiltering();
 const { removeBodyClass } = useHelpers();
@@ -11,7 +11,34 @@ const { hideCategories } = defineProps({ hideCategories: { type: Boolean, defaul
 
 const globalProductAttributes = (runtimeConfig?.public?.GLOBAL_PRODUCT_ATTRIBUTES as WooNuxtFilter[]) || [];
 const taxonomies = globalProductAttributes.map((attr) => attr?.slug?.toUpperCase().replace('_', '')) as TaxonomyEnum[];
-const { data } = await useAsyncGql('getAllTerms', { taxonomies: [...taxonomies, TaxonomyEnum.PRODUCTCATEGORY] });
+const { data } = {
+  "data": {
+    "terms": {
+      "nodes": [
+        {
+          "taxonomyName": "Categoría",
+          "name": "Electrónicos",
+          "slug": "electronicos",
+          "count": 150
+        },
+        {
+          "taxonomyName": "Etiqueta",
+          "name": "Oferta",
+          "slug": "oferta",
+          "count": 120
+        },
+        {
+          "taxonomyName": "Categoría",
+          "name": "Ropa",
+          "slug": "ropa",
+          "count": 100
+        }
+        // Puedes agregar más términos si lo deseas
+      ]
+    }
+  }
+}
+
 const terms = data.value?.terms?.nodes || [];
 
 // Filter out the product category terms and the global product attributes with their terms

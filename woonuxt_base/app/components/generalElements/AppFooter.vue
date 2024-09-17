@@ -55,7 +55,6 @@ const { wishlistLink } = useAuth();
           <a href="https://scottyzen.com" title="Scott Kennedy - Web Developer" target="_blank">Scott Kennedy</a>
         </p>
       </div>
-      <SocialIcons class="ml-auto" />
     </div>
   </footer>
 </template>

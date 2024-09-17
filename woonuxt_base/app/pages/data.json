@@ -1,0 +1,227 @@
+{
+    "data": {
+      "products": {
+      "pageInfo": {
+        "hasNextPage": true,
+        "endCursor": "MzA="
+      },
+      "nodes": [
+        {
+          "name": "Product 1",
+          "slug": "product-1",
+          "type": "simple",
+          "databaseId": 123,
+          "id": "123",
+          "averageRating": 4.5,
+          "reviewCount": 15,
+          "terms": {
+            "slug": ["category-1"],
+            "name": ["Category 1"]
+          },
+          "productCategories": {
+            "nodes": [
+              {
+                "name": "Category 1",
+                "slug": "category-1"
+              }
+            ]
+          },
+          "simpleProduct": {
+            "id": "123",
+            "name": "Product 1",
+            "description": "This is product 1",
+            "regularPrice": {
+              "amount": "100.00"
+            }
+          }
+        },
+        {
+          "name": "Product 2",
+          "slug": "product-2",
+          "type": "simple",
+          "databaseId": 124,
+          "id": "124",
+          "averageRating": 3,
+          "reviewCount": 10,
+          "terms": {
+            "slug": ["category-2"],
+            "name": ["Category 2"]
+          },
+          "productCategories": {
+            "nodes": [
+              {
+                "name": "Category 2",
+                "slug": "category-2"
+              }
+            ]
+          },
+          "simpleProduct": {
+            "id": "124",
+            "name": "Product 2",
+            "description": "This is product 2",
+            "regularPrice": {
+              "amount": "80.00"
+            }
+          }
+        },
+        {
+          "name": "Product 3",
+          "slug": "product-3",
+          "type": "simple",
+          "databaseId": 125,
+          "id": "125",
+          "averageRating": 2,
+          "reviewCount": 18,
+          "terms": {
+            "slug": ["category-3"],
+            "name": ["Category 3"]
+          },
+          "productCategories": {
+            "nodes": [
+              {
+                "name": "Category 3",
+                "slug": "category-3"
+              }
+            ]
+          },
+          "simpleProduct": {
+            "id": "125",
+            "name": "Product 3",
+            "description": "This is product 3",
+            "regularPrice": {
+              "amount": "180.00"
+            }
+          }
+        },
+        {
+          "name": "Product 4",
+          "slug": "product-4",
+          "type": "simple",
+          "databaseId": 126,
+          "id": "126",
+          "averageRating": 5,
+          "reviewCount": 3,
+          "terms": {
+            "slug": ["category-4"],
+            "name": ["Category 4"]
+          },
+          "productCategories": {
+            "nodes": [
+              {
+                "name": "Category 4",
+                "slug": "category-4"
+              }
+            ]
+          },
+          "simpleProduct": {
+            "id": "126",
+            "name": "Product 4",
+            "description": "This is product 4",
+            "regularPrice": {
+              "amount": "200.00"
+            }
+          }
+        },
+        {
+          "name": "Product 5",
+          "slug": "product-5",
+          "type": "simple",
+          "databaseId": 127,
+          "id": "127",
+          "averageRating": 1,
+          "reviewCount": 30,
+          "terms": {
+            "slug": ["category-5"],
+            "name": ["Category 5"]
+          },
+          "productCategories": {
+            "nodes": [
+              {
+                "name": "Category 5",
+                "slug": "category-5"
+              }
+            ]
+          },
+          "simpleProduct": {
+            "id": "127",
+            "name": "Product 5",
+            "description": "This is product 5",
+            "regularPrice": {
+              "amount": "50.00"
+            }
+          }
+        },
+        {
+          "name": "Product 6",
+          "slug": "product-6",
+          "type": "simple",
+          "databaseId": 128,
+          "id": "128",
+          "averageRating": 4,
+          "reviewCount": 7,
+          "terms": {
+            "slug": ["category-6"],
+            "name": ["Category 16"]
+          },
+          "productCategories": {
+            "nodes": [
+              {
+                "name": "Category 6",
+                "slug": "category-6"
+              }
+            ]
+          },
+          "simpleProduct": {
+            "id": "128",
+            "name": "Product 6",
+            "description": "This is product 6",
+            "regularPrice": {
+              "amount": "130.00"
+            }
+          }
+        }
+      ]
+    },
+      "productCategories": {
+        "nodes": [
+          {
+            "count": 42,
+            "databaseId": 1,
+            "id": "Y2F0ZWdvcnkx",
+            "name": "Electrónica",
+            "slug": "electronica",
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/9/5000/3269",
+              "altText": "Imagen de Electrónica",
+              "title": "Electrónica"
+            }
+          },
+          {
+            "count": 35,
+            "databaseId": 2,
+            "id": "Y2F0ZWdvcnky",
+            "name": "Libros",
+            "slug": "libros",
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/24/4855/1803",
+              "altText": "Imagen de Libros",
+              "title": "Libros"
+            }
+          },
+          {
+            "count": 28,
+            "databaseId": 3,
+            "id": "Y2F0ZWdvcnkz",
+            "name": "Ropa",
+            "slug": "ropa",
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/21/3008/2008",
+              "altText": "Imagen de Ropa",
+              "title": "Ropa"
+            }
+          }
+
+        ]
+      }
+    }
+  }
