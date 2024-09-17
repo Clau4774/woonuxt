@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import dataJson from '../../data/data.json';
 const runtimeConfig = useRuntimeConfig();
 
 const { product } = defineProps<{ product: Product }>();
 
 // TODO fetch perma link from WP API
 const productCategoryPermallink = runtimeConfig?.public?.PRODUCT_CATEGORY_PERMALINK || '/product-category/';
-const primaryCategory = computed(() => product.productCategories?.nodes[0]);
+const primaryCategory = computed(() => dataJson.data.productCategories?.nodes[0]);
 const format = computed(() => [
   { name: 'Products', slug: '/products' },
   {

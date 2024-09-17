@@ -2,12 +2,11 @@
 const { siteName, description, shortDescription, siteImage } = useAppConfig();
 import dataJson from '../data/data.json';
 
-const data = dataJson;
 //const { data } = await useAsyncGql('getProductCategories', { first: 6 });
-const productCategories = data.data.productCategories?.nodes || [];
+const productCategories = dataJson.data.productCategories?.nodes || [];
 
 //const { data: productData } = await useAsyncGql('getProducts', { first: 5, orderby: ProductsOrderByEnum.POPULARITY });
-const popularProducts = data.data.products?.nodes || [];
+const popularProducts = dataJson.data.products?.nodes || [];
 
 useSeoMeta({
   title: `Home`,
