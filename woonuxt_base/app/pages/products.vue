@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import dataJson from "./data.json";
+import dataJson from "../data/data.json";
 const { setProducts, updateProductList } = useProducts();
 const route = useRoute();
 const { storeSettings } = useAppConfig();

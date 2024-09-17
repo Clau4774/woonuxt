@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import dataJson from "./data.json";
+import dataJson from "../data/data.json";
 const { data } =  dataJson;
 
 console.log(data)
