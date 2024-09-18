@@ -168,7 +168,7 @@ if (!data.products.nodes[0]?.simpleProduct) {
   throw showError({ statusCode: 404, statusMessage: t('messages.shop.productNotFound') });
 }
 
-const product = ref<Product>(data?.products.nodes[0].simpleProduct);
+const product = ref<Product>(data.products.nodes.filter(elem => elem.slug === slug)[0]?.simpleProduct);
 const quantity = ref<number>(1);
 const activeVariation = ref<Variation | null>(null);
 const variation = ref<VariationAttribute[]>([]);

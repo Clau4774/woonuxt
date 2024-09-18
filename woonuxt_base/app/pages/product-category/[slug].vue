@@ -6,9 +6,11 @@ const route = useRoute();
 const slug = route.params.slug;
 import jsonData from '../../data/data.json'
 
+const { data } = jsonData;
+
 //const { data } = await useAsyncGql('getProducts', { slug });
 //const productsInCategory = (data.value?.products?.nodes || []) as Product[];
-const productsInCategory = (jsonData.data.products?.nodes || []) as Product[];
+const productsInCategory = (data.products.nodes || []) as Product[];
 setProducts(productsInCategory);
 
 onMounted(() => {
