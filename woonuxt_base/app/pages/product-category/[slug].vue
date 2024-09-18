@@ -4,9 +4,11 @@ const { isQueryEmpty } = useHelpers();
 const { storeSettings } = useAppConfig();
 const route = useRoute();
 const slug = route.params.slug;
+import jsonData from '../../data/data.json'
 
-const { data } = await useAsyncGql('getProducts', { slug });
-const productsInCategory = (data.value?.products?.nodes || []) as Product[];
+//const { data } = await useAsyncGql('getProducts', { slug });
+//const productsInCategory = (data.value?.products?.nodes || []) as Product[];
+const productsInCategory = (jsonData.data.products?.nodes || []) as Product[];
 setProducts(productsInCategory);
 
 onMounted(() => {
