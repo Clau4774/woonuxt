@@ -170,7 +170,7 @@ if (!data.products.nodes[0]?.simpleProduct) {
 
 const product = ref<Product>(data.products.nodes.filter(elem => elem.slug === slug)[0]?.simpleProduct);
 const quantity = ref<number>(1);
-const activeVariation = ref<Variation | null>(null);
+//const activeVariation = ref<Variation | null>(null);
 const variation = ref<VariationAttribute[]>([]);
 const indexOfTypeAny = computed<number[]>(() => checkForVariationTypeOfAny(product));
 const attrValues = ref();
@@ -178,7 +178,8 @@ const isSimpleProduct = computed<boolean>(() => product.type === "SIMPLE");
 const isVariableProduct = computed<boolean>(() => product.type === "VARIABLE");
 const isExternalProduct = computed<boolean>(() => product.type === "EXTERNAL");
 
-const type = computed(() => activeVariation.value || product);
+const type = computed(() => null || product);
+console.log(type);
 const selectProductInput = computed<any>(() => ({ productId: type.databaseId, quantity: quantity.value })) as ComputedRef<AddToCartInput>;
 
 const mergeLiveStockStatus = (payload: Product): void => {
@@ -327,6 +328,7 @@ const disabledAddToCart = computed(() => {
             <ShareButton :product />
           </div>
         </div>
+
       </div>
       <div v-if="product.description || product.reviews" class="my-32">
         <ProductTabs :product />

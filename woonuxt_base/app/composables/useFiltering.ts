@@ -13,6 +13,8 @@ export function useFiltering() {
 
   filterQuery.value = route.query.filter as string;
 
+console.log(route.query)
+
   /**
    * Get the filter value from the url
    * @param {string} filterName
@@ -20,6 +22,8 @@ export function useFiltering() {
    * @example getFilter('pa_color') // ["green", "blue"]
    */
   function getFilter(filterName: string): string[] {
+    //console.log("getFilter",filterQuery.value?.split(`${filterName}[`)[1]?.split(']')[0]?.split(',') || [])
+    console.log("filterQuery.value", filterQuery.value);
     return filterQuery.value?.split(`${filterName}[`)[1]?.split(']')[0]?.split(',') || [];
   }
 
