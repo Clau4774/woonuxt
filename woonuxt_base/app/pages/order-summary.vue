@@ -1,5 +1,15 @@
 <script setup lang="ts">
-import { OrderStatusEnum } from '#woo';
+// import { OrderStatusEnum } from '#woo';
+enum OrderStatusEnum {
+  PENDING = 'PENDING',
+  PROCESSING = 'PROCESSING',
+  ON_HOLD = 'ON_HOLD',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED',
+  REFUNDED = 'REFUNDED',
+  FAILED = 'FAILED',
+  TRASH = 'TRASH'
+}
 
 const { query, params, name } = useRoute();
 const { customer } = useAuth();
