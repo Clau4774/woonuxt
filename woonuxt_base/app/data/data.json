@@ -1,227 +1,352 @@
 {
-    "data": {
-      "products": {
+  "data": {
+    "products": {
       "pageInfo": {
         "hasNextPage": true,
         "endCursor": "MzA="
       },
       "nodes": [
         {
-          "name": "Product 1",
-          "slug": "product-1",
+          "name": "Smartphone",
+          "slug": "smartphone",
           "type": "simple",
           "databaseId": 123,
           "id": "123",
           "averageRating": 4.5,
           "reviewCount": 15,
           "terms": {
-            "slug": ["category-1"],
-            "name": ["Category 1"]
+            "slug": ["electronica"],
+            "name": ["Electrónica"]
+          },
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=1",
+            "altText": "Smartphone XYZ Pro",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=1",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=1"
           },
           "productCategories": {
             "nodes": [
               {
-                "name": "Category 1",
-                "slug": "category-1"
+                "name": "Electrónica",
+                "slug": "electronica"
               }
             ]
           },
           "simpleProduct": {
             "id": "123",
-            "name": "Product 1",
-            "description": "This is product 1",
+            "name": "Smartphone",
+            "description": "Un smartphone de última generación",
             "regularPrice": {
-              "amount": "100.00"
+              "amount": "699.00"
+            },
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/1/5000/3269",
+              "altText": "Imagen de Smartphone",
+              "title": "Smartphone",
+              "cartSourceUrl": "https://picsum.photos/id/1/150/150",
+              "producCardSourceUrl": "https://picsum.photos/id/1/300/300"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://picsum.photos/id/1/5000/3269",
+                  "databaseId": 1
+                }
+              ]
             }
           }
         },
         {
-          "name": "Product 2",
-          "slug": "product-2",
+          "name": "Laptop",
+          "slug": "laptop",
           "type": "simple",
           "databaseId": 124,
           "id": "124",
-          "averageRating": 3,
+          "averageRating": 4,
           "reviewCount": 10,
           "terms": {
-            "slug": ["category-2"],
-            "name": ["Category 2"]
+            "slug": ["electronica"],
+            "name": ["Electrónica"]
+          },
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=2",
+            "altText": "Laptop XYZ Pro",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=2",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=2"
           },
           "productCategories": {
             "nodes": [
               {
-                "name": "Category 2",
-                "slug": "category-2"
+                "name": "Electrónica",
+                "slug": "electronica"
               }
             ]
           },
           "simpleProduct": {
             "id": "124",
-            "name": "Product 2",
-            "description": "This is product 2",
+            "name": "Laptop",
+            "description": "Una laptop potente para trabajo y juegos",
             "regularPrice": {
-              "amount": "80.00"
+              "amount": "999.00"
+            },
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/2/5000/3269",
+              "altText": "Imagen de Laptop",
+              "title": "Laptop",
+              "cartSourceUrl": "https://picsum.photos/id/2/150/150",
+              "producCardSourceUrl": "https://picsum.photos/id/2/300/300"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://picsum.photos/id/2/5000/3269",
+                  "databaseId": 2
+                }
+              ]
             }
           }
         },
         {
-          "name": "Product 3",
-          "slug": "product-3",
+          "name": "Libro de Ciencia Ficción",
+          "slug": "libro-ciencia-ficcion",
           "type": "simple",
           "databaseId": 125,
           "id": "125",
-          "averageRating": 2,
-          "reviewCount": 18,
+          "averageRating": 4.8,
+          "reviewCount": 25,
           "terms": {
-            "slug": ["category-3"],
-            "name": ["Category 3"]
+            "slug": ["libros"],
+            "name": ["Libros"]
+          },
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=3",
+            "altText": "Libro de Ciencia Ficción XYZ",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=3",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=3"
           },
           "productCategories": {
             "nodes": [
               {
-                "name": "Category 3",
-                "slug": "category-3"
+                "name": "Libros",
+                "slug": "libros"
               }
             ]
           },
           "simpleProduct": {
             "id": "125",
-            "name": "Product 3",
-            "description": "This is product 3",
+            "name": "Libro de Ciencia Ficción",
+            "description": "Un libro emocionante de ciencia ficción",
             "regularPrice": {
-              "amount": "180.00"
+              "amount": "15.00"
+            },
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/3/5000/3269",
+              "altText": "Imagen de Libro de Ciencia Ficción",
+              "title": "Libro de Ciencia Ficción",
+              "cartSourceUrl": "https://picsum.photos/id/3/150/150",
+              "producCardSourceUrl": "https://picsum.photos/id/3/300/300"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://picsum.photos/id/3/5000/3269",
+                  "databaseId": 3
+                }
+              ]
             }
           }
         },
         {
-          "name": "Product 4",
-          "slug": "product-4",
+          "name": "Novela Romántica",
+          "slug": "novela-romantica",
           "type": "simple",
           "databaseId": 126,
           "id": "126",
-          "averageRating": 5,
-          "reviewCount": 3,
+          "averageRating": 4.2,
+          "reviewCount": 18,
           "terms": {
-            "slug": ["category-4"],
-            "name": ["Category 4"]
+            "slug": ["libros"],
+            "name": ["Libros"]
+          },
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=4",
+            "altText": "Novela Romántica XYZ",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=4",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=4"
           },
           "productCategories": {
             "nodes": [
               {
-                "name": "Category 4",
-                "slug": "category-4"
+                "name": "Libros",
+                "slug": "libros"
               }
             ]
           },
           "simpleProduct": {
             "id": "126",
-            "name": "Product 4",
-            "description": "This is product 4",
+            "name": "Novela Romántica",
+            "description": "Una novela romántica que te atrapará",
             "regularPrice": {
-              "amount": "200.00"
+              "amount": "12.00"
+            },
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/4/5000/3269",
+              "altText": "Imagen de Novela Romántica",
+              "title": "Novela Romántica",
+              "cartSourceUrl": "https://picsum.photos/id/4/150/150",
+              "producCardSourceUrl": "https://picsum.photos/id/4/300/300"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://picsum.photos/id/4/5000/3269",
+                  "databaseId": 4
+                }
+              ]
             }
           }
         },
         {
-          "name": "Product 5",
-          "slug": "product-5",
+          "name": "Camiseta",
+          "slug": "camiseta",
           "type": "simple",
           "databaseId": 127,
           "id": "127",
-          "averageRating": 1,
+          "averageRating": 4.7,
           "reviewCount": 30,
           "terms": {
-            "slug": ["category-5"],
-            "name": ["Category 5"]
+            "slug": ["ropa"],
+            "name": ["Ropa"]
+          },
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=5",
+            "altText": "Camiseta XYZ",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=5",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=5"
           },
           "productCategories": {
             "nodes": [
               {
-                "name": "Category 5",
-                "slug": "category-5"
+                "name": "Ropa",
+                "slug": "ropa"
               }
             ]
           },
           "simpleProduct": {
             "id": "127",
-            "name": "Product 5",
-            "description": "This is product 5",
+            "name": "Camiseta",
+            "description": "Una camiseta cómoda y de alta calidad",
             "regularPrice": {
-              "amount": "50.00"
+              "amount": "20.00"
+            },
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/5/5000/3269",
+              "altText": "Imagen de Camiseta",
+              "title": "Camiseta",
+              "cartSourceUrl": "https://picsum.photos/id/5/150/150",
+              "producCardSourceUrl": "https://picsum.photos/id/5/300/300"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://picsum.photos/id/5/5000/3269",
+                  "databaseId": 5
+                }
+              ]
             }
           }
         },
         {
-          "name": "Product 6",
-          "slug": "product-6",
+          "name": "Pantalones",
+          "slug": "pantalones",
           "type": "simple",
           "databaseId": 128,
           "id": "128",
-          "averageRating": 4,
-          "reviewCount": 7,
+          "averageRating": 4.3,
+          "reviewCount": 22,
           "terms": {
-            "slug": ["category-6"],
-            "name": ["Category 6"]
+            "slug": ["ropa"],
+            "name": ["Ropa"]
+          },
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=6",
+            "altText": "Pantalones XYZ",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=6",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=6"
           },
           "productCategories": {
             "nodes": [
               {
-                "name": "Category 6",
-                "slug": "category-6"
+                "name": "Ropa",
+                "slug": "ropa"
               }
             ]
           },
           "simpleProduct": {
             "id": "128",
-            "name": "Product 6",
-            "description": "This is product 6",
+            "name": "Pantalones",
+            "description": "Pantalones elegantes y cómodos",
             "regularPrice": {
-              "amount": "130.00"
+              "amount": "35.00"
+            },
+            "image": {
+              "sourceUrl": "https://picsum.photos/id/6/5000/3269",
+              "altText": "Imagen de Pantalones",
+              "title": "Pantalones",
+              "cartSourceUrl": "https://picsum.photos/id/6/150/150",
+              "producCardSourceUrl": "https://picsum.photos/id/6/300/300"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://picsum.photos/id/6/5000/3269",
+                  "databaseId": 6
+                }
+              ]
             }
           }
         }
       ]
     },
-      "productCategories": {
-        "nodes": [
-          {
-            "count": 42,
-            "databaseId": 1,
-            "id": "Y2F0ZWdvcnkx",
-            "name": "Electrónica",
-            "slug": "electronica",
-            "image": {
-              "sourceUrl": "https://picsum.photos/id/9/5000/3269",
-              "altText": "Imagen de Electrónica",
-              "title": "Electrónica"
-            }
-          },
-          {
-            "count": 35,
-            "databaseId": 2,
-            "id": "Y2F0ZWdvcnky",
-            "name": "Libros",
-            "slug": "libros",
-            "image": {
-              "sourceUrl": "https://picsum.photos/id/24/4855/1803",
-              "altText": "Imagen de Libros",
-              "title": "Libros"
-            }
-          },
-          {
-            "count": 28,
-            "databaseId": 3,
-            "id": "Y2F0ZWdvcnkz",
-            "name": "Ropa",
-            "slug": "ropa",
-            "image": {
-              "sourceUrl": "https://picsum.photos/id/21/3008/2008",
-              "altText": "Imagen de Ropa",
-              "title": "Ropa"
-            }
+    "productCategories": {
+      "nodes": [
+        {
+          "count": 42,
+          "databaseId": 1,
+          "id": "Y2F0ZWdvcnkx",
+          "name": "Electrónica",
+          "slug": "electronica",
+          "image": {
+            "sourceUrl": "https://picsum.photos/id/9/5000/3269",
+            "altText": "Imagen de Electrónica",
+            "title": "Electrónica"
           }
-
-        ]
-      }
+        },
+        {
+          "count": 35,
+          "databaseId": 2,
+          "id": "Y2F0ZWdvcnky",
+          "name": "Libros",
+          "slug": "libros",
+          "image": {
+            "sourceUrl": "https://picsum.photos/id/24/4855/1803",
+            "altText": "Imagen de Libros",
+            "title": "Libros"
+          }
+        },
+        {
+          "count": 28,
+          "databaseId": 3,
+          "id": "Y2F0ZWdvcnkz",
+          "name": "Ropa",
+          "slug": "ropa",
+          "image": {
+            "sourceUrl": "https://picsum.photos/id/21/3008/2008",
+            "altText": "Imagen de Ropa",
+            "title": "Ropa"
+          }
+        }
+      ]
     }
   }
+}
