@@ -2,7 +2,7 @@
 import dataJson from "../data/data.json";
 const { data } =  dataJson;
 
-console.log(data)
+
 const productCategories = data.productCategories?.nodes as ProductCategory[];
 
 useHead({

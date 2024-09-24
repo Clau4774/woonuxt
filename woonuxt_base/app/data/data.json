@@ -35,7 +35,7 @@
           "simpleProduct": {
             "id": "123",
             "name": "Smartphone",
-            "description": "Un smartphone de última generación",
+                        "description": "Un smartphone de última generación",
             "regularPrice": {
               "amount": "699.00"
             },
