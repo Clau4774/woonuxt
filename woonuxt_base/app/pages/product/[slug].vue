@@ -7,39 +7,29 @@ const { addToCart, isUpdatingCart } = useCart();
 const { t } = useI18n();
 const slug = route.params.slug as string;
 
-const {data} = jsonData;
+const { data } = jsonData;
 
-if (!data.products.nodes.find(elem => elem.slug === slug)?.simpleProduct) {
+if (!data.products.nodes.find(elem => elem.slug === slug)) {
   throw showError({ statusCode: 404, statusMessage: t('messages.shop.productNotFound') });
 }
 
-const product = ref<Product>(data.products.nodes.find(elem => elem.slug === slug)?.simpleProduct);
-const quantity = ref<number>(1);
+const product = data.products.nodes.find(elem => elem.slug === slug);
+const quantity = 1;
 const activeVariation = ref<Variation | null>(null);
 const variation = ref<VariationAttribute[]>([]);
 const indexOfTypeAny = computed<number[]>(() => checkForVariationTypeOfAny(product));
 const attrValues = ref();
-const isSimpleProduct = computed<boolean>(() => product.type === "SIMPLE");
-const isVariableProduct = computed<boolean>(() => product.type === "VARIABLE");
-const isExternalProduct = computed<boolean>(() => product.type === "EXTERNAL");
 
-const type = computed(() => null || product);
-console.log(type);
-const selectProductInput = computed<any>(() => ({ productId: type.databaseId, quantity: quantity.value })) as ComputedRef<AddToCartInput>;
+const isSimpleProduct = product?.type === "SIMPLE"
+const isVariableProduct = product?.type === "VARIABLE"
+const isExternalProduct = product?.type === "EXTERNAL"
 
-const mergeLiveStockStatus = (payload: Product): void => {
-  product.stockStatus = payload.stockStatus ?? product.stockStatus;
-
-  payload.variations?.nodes?.forEach((variation: Variation, index: number) => {
-    if (product.variations?.nodes[index]) {
-      product.variations.nodes[index].stockStatus = variation.stockStatus;
-    }
-  });
-};
+const type = product
+const selectProductInput = computed<any>(() => ({ productId: product?.databaseId, quantity: quantity }));
 
 onMounted(async () => {
   try {
-    const { product } = await GqlGetStockStatus({ slug });
+    const product = data.products.nodes.find(product => product.slug === slug);
     if (product) mergeLiveStockStatus(product as Product);
   } catch (error: any) {
     const errorMessage = error?.gqlErrors?.[0].message;
@@ -48,11 +38,11 @@ onMounted(async () => {
 });
 
 const updateSelectedVariations = (variations: VariationAttribute[]): void => {
-  if (!product.value.variations) return;
+  if (!product?.variations) return;
 
   attrValues.value = variations.map((el) => ({ attributeName: el.name, attributeValue: el.value }));
   const clonedVariations = JSON.parse(JSON.stringify(variations));
-  const getActiveVariation = product.value.variations?.nodes.filter((variation: any) => {
+  const getActiveVariation = product?.variations?.nodes.filter((variation: any) => {
     // If there is any variation of type ANY set the value to ''
     if (variation.attributes) {
       // Set the value of the variation of type ANY to ''
@@ -61,7 +51,7 @@ const updateSelectedVariations = (variations: VariationAttribute[]): void => {
       return arraysEqual(formatArray(variation.attributes.nodes), formatArray(clonedVariations));
     }
   });
-  
+
 
   if (getActiveVariation[0]) activeVariation.value = getActiveVariation[0];
   selectProductInput.value.variationId = activeVariation.databaseId ?? null;
@@ -69,14 +59,9 @@ const updateSelectedVariations = (variations: VariationAttribute[]): void => {
   variation.value = variations;
 };
 
-const stockStatus = computed(() => {
-  if (isVariableProduct.value) return activeVariation.stockStatus || "OUT_OF_STOCK";
-  return type.stockStatus || "OUT_OF_STOCK";
-});
-const disabledAddToCart = computed(() => {
-  if (isSimpleProduct.value) return !type.value || stockStatus.value === "OUT_OF_STOCK" || isUpdatingCart.value;
-  return !type.value || stockStatus.value === "OUT_OF_STOCK" || !activeVariation.value || isUpdatingCart.value;
-});
+const stockStatus = isVariableProduct ? activeVariation?.stockStatus : product?.stockStatus || "OUT_OF_STOCK";
+console.log(stockStatus)
+const disabledAddToCart = (isSimpleProduct) && !type || stockStatus === "OUT_OF_STOCK" || isUpdatingCart || !type || stockStatus === "OUT_OF_STOCK" || !activeVariation || isUpdatingCart;
 </script>
 
 <template>
@@ -86,25 +71,21 @@ const disabledAddToCart = computed(() => {
       <Breadcrumb :product class="mb-6" v-if="storeSettings.showBreadcrumbOnSingleProduct" />
 
       <div class="flex flex-col gap-10 md:flex-row md:justify-between lg:gap-24">
-        <ProductImageGallery
-          v-if="product.image"
-          class="relative flex-1"
-          :main-image="product.image"
-          :gallery="product.galleryImages!"
-          :node="type"
-          :activeVariation="activeVariation || {}" />
-        <NuxtImg v-else class="relative flex-1 skeleton" src="/images/placeholder.jpg" :alt="product?.name || 'Product'" />
+        <ProductImageGallery v-if="product.image" class="relative flex-1" :main-image="product.image"
+          :gallery="product.galleryImages!" :node="type" :activeVariation="activeVariation || {}" />
+        <NuxtImg v-else class="relative flex-1 skeleton" src="/images/placeholder.jpg"
+          :alt="product?.name || 'Product'" />
 
         <div class="lg:max-w-md xl:max-w-lg md:py-2 w-full">
           <div class="flex justify-between mb-4">
             <div class="flex-1">
               <h1 class="flex flex-wrap items-center gap-2 mb-2 text-2xl font-sesmibold">
-                {{ type.name }}
-                <LazyWPAdminLink :link="`/wp-admin/post.php?post=${product.databaseId}&action=edit`">Edit</LazyWPAdminLink>
+                {{ product.name }}
               </h1>
-              <StarRating :rating="product.averageRating || 0" :count="product.reviewCount || 0" v-if="storeSettings.showReviews" />
+              <StarRating :rating="product.averageRating || 0" :count="product.reviewCount || 0"
+                v-if="storeSettings.showReviews" />
             </div>
-            <ProductPrice class="text-xl" :sale-price="type.salePrice" :regular-price="type.regularPrice" />
+            <ProductPrice class="text-xl" :sale-price="product.salePrice" :regular-price="product.regularPrice" />
           </div>
 
           <div class="grid gap-2 my-8 text-sm empty:hidden">
@@ -123,28 +104,17 @@ const disabledAddToCart = computed(() => {
           <hr />
 
           <form @submit.prevent="addToCart(selectProductInput)">
-            <AttributeSelections
-              v-if="isVariableProduct && product.attributes && product.variations"
-              class="mt-4 mb-8"
-              :attributes="product.attributes.nodes"
-              :defaultAttributes="product.defaultAttributes"
-              :variations="product.variations.nodes"
-              @attrs-changed="updateSelectedVariations" />
-            <div
-              v-if="isVariableProduct || isSimpleProduct"
+            <AttributeSelections v-if="isVariableProduct && product.attributes && product.variations" class="mt-4 mb-8"
+              :attributes="product.attributes.nodes" :defaultAttributes="product.defaultAttributes"
+              :variations="product.variations.nodes" @attrs-changed="updateSelectedVariations" />
+            <div v-if="isVariableProduct || isSimpleProduct"
               class="fixed bottom-0 left-0 z-10 flex items-center w-full gap-4 p-4 mt-12 bg-white md:static md:bg-transparent bg-opacity-90 md:p-0">
-              <input
-                v-model="quantity"
-                type="number"
-                min="1"
-                aria-label="Quantity"
+              <input v-model="quantity" type="number" min="1" aria-label="Quantity"
                 class="bg-white border rounded-lg flex text-left p-2.5 w-20 gap-4 items-center justify-center focus:outline-none" />
-              <AddToCartButton class="flex-1 w-full md:max-w-xs" :disabled="disabledAddToCart" :class="{ loading: isUpdatingCart }" />
+              <AddToCartButton class="flex-1 w-full md:max-w-xs" :disabled="disabledAddToCart"
+                :class="{ loading: isUpdatingCart }" />
             </div>
-            <a
-              v-if="isExternalProduct && product.externalUrl"
-              :href="product.externalUrl"
-              target="_blank"
+            <a v-if="isExternalProduct && product.externalUrl" :href="product.externalUrl" target="_blank"
               class="rounded-lg flex font-bold bg-gray-800 text-white text-center min-w-[150px] p-2.5 gap-4 items-center justify-center focus:outline-none">
               {{ product?.buttonText || 'View product' }}
             </a>
@@ -155,13 +125,9 @@ const disabledAddToCart = computed(() => {
               <div class="flex items-center gap-2">
                 <span class="text-gray-400">{{ $t('messages.shop.category', 2) }}:</span>
                 <div class="product-categories">
-                  <NuxtLink
-                    v-for="category in product.productCategories.nodes"
-                    :key="category.slug"
-                    :to="`/product-category/${decodeURIComponent(category.slug)}`"
-                    class="hover:text-primary"
-                    :title="category.name"
-                    >{{ category.name }}<span class="comma">, </span>
+                  <NuxtLink v-for="category in product.productCategories.nodes" :key="category.slug"
+                    :to="`/product-category/${decodeURIComponent(category.slug)}`" class="hover:text-primary"
+                    :title="category.name">{{ category.name }}<span class="comma">, </span>
                   </NuxtLink>
                 </div>
               </div>
@@ -188,7 +154,7 @@ const disabledAddToCart = computed(() => {
 </template>
 
 <style scoped>
-.product-categories > a:last-child .comma {
+.product-categories>a:last-child .comma {
   display: none;
 }
 

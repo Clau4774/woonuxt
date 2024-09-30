@@ -7,6 +7,183 @@
       },
       "nodes": [
         {
+          "name": "Ejemplo de Producto",
+          "type": "SIMPLE",
+          "databaseId": 123,
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "ejemplo-de-producto",
+          "sku": "EJP-001",
+          "description": "<p>Descripción detallada del producto.</p>",
+          "rawDescription": "Descripción detallada del producto.",
+          "shortDescription": "Breve descripción del producto.",
+          "attributes": {
+            "nodes": [
+              {
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "price": "€19.99",
+          "rawPrice": "19.99",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€24.99",
+          "rawRegularPrice": "24.99",
+          "salePrice": "€19.99",
+          "rawSalePrice": "19.99",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 100,
+          "lowStockAmount": 10,
+          "averageRating": "4.5",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 25,
+          "onSale": true,
+          "virtual": false,
+          "image": {
+            "id": "aW1hZ2U6NDU2",
+            "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+            "altText": "Imagen del producto",
+            "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+            "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
+          },
+          "galleryImages": {
+            "nodes": [
+              {
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Imagen de galería 1",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Producto Relacionado 1",
+                "slug": "producto-relacionado-1",
+                "price": "€29.99",
+                "rawPrice": "29.99",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4.5",
+            "edges": [
+              {
+                "rating": 5,
+                "node": {
+                  "content": "¡Excelente producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-04-10T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Juan Pérez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-juan.jpg"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "simpleProduct": {
+            "name": "Ejemplo de Producto",
+            "slug": "ejemplo-de-producto",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["electronica"],
+              "name": ["Electrónica"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
+            "regularPrice": {
+              "amount": "24.99"
+            },
+            "image": {
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
+                }
+              ]
+            }
+          }
+        },
+        {
           "name": "Smartphone",
           "slug": "smartphone",
           "type": "simple",
@@ -35,7 +212,10 @@
           "simpleProduct": {
             "id": "123",
             "name": "Smartphone",
-                        "description": "Un smartphone de última generación",
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "Un smartphone de última generación",
             "regularPrice": {
               "amount": "699.00"
             },
