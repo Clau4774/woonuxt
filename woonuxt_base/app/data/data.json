@@ -1,13 +1,9 @@
 {
   "data": {
     "products": {
-      "pageInfo": {
-        "hasNextPage": true,
-        "endCursor": "MzA="
-      },
       "nodes": [
         {
-          "name": "Ejemplo de Producto",
+          "name": "Remera de ejemplo",
           "type": "SIMPLE",
           "databaseId": 123,
           "id": "cHJvZHVjdDoxMjM=",
@@ -18,11 +14,11 @@
               "value": "rojo"
             }
           ],
-          "slug": "ejemplo-de-producto",
+          "slug": "remera-de-ejemplo",
           "sku": "EJP-001",
-          "description": "<p>Descripción detallada del producto.</p>",
-          "rawDescription": "Descripción detallada del producto.",
-          "shortDescription": "Breve descripción del producto.",
+          "description": "<p>Esta es una remera de ejemplo.</p>",
+          "rawDescription": "Esta es una remera de ejemplo.",
+          "shortDescription": "Remera de ejemplo.",
           "attributes": {
             "nodes": [
               {
@@ -58,30 +54,29 @@
               }
             ]
           },
-          "price": "€19.99",
-          "rawPrice": "19.99",
+          "price": "€10.99",
+          "rawPrice": "€10.99",
           "date": "2023-04-15T10:00:00",
           "regularPrice": "€24.99",
           "rawRegularPrice": "24.99",
-          "salePrice": "€19.99",
-          "rawSalePrice": "19.99",
+          "salePrice": "€10.99",
+          "rawSalePrice": "10.99",
           "stockStatus": "IN_STOCK",
-          "stockQuantity": 100,
+          "stockQuantity": 50,
           "lowStockAmount": 10,
           "averageRating": "4.5",
           "weight": "0.5",
           "length": "10",
           "width": "5",
           "height": "2",
-          "reviewCount": 25,
+          "reviewCount": 21,
           "onSale": true,
           "virtual": false,
           "image": {
-            "id": "aW1hZ2U6NDU2",
-            "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
-            "altText": "Imagen del producto",
-            "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
-            "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
+            "sourceUrl": "https://picsum.photos/800/600?random=1",
+            "altText": "Camiseta XYZ",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=1",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=1"
           },
           "galleryImages": {
             "nodes": [
@@ -184,308 +179,1301 @@
           }
         },
         {
-          "name": "Smartphone",
-          "slug": "smartphone",
-          "type": "simple",
+          "name": "Pantalones de ejemplo",
+          "type": "SIMPLE",
           "databaseId": 123,
-          "id": "123",
-          "averageRating": 4.5,
-          "reviewCount": 15,
-          "terms": {
-            "slug": ["electronica"],
-            "name": ["Electrónica"]
-          },
-          "image": {
-            "sourceUrl": "https://picsum.photos/800/600?random=1",
-            "altText": "Smartphone XYZ Pro",
-            "cartSourceUrl": "https://picsum.photos/150/150?random=1",
-            "producCardSourceUrl": "https://picsum.photos/300/300?random=1"
-          },
-          "productCategories": {
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "pantalones-de-ejemplo",
+          "sku": "EJP-002",
+          "description": "<p>Estos son pantalones de ejemplo..</p>",
+          "rawDescription": "Estos son pantalones de ejemplo",
+          "shortDescription": "Pantalones de ejemplo.",
+          "attributes": {
             "nodes": [
               {
-                "name": "Electrónica",
-                "slug": "electronica"
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
               }
             ]
           },
-          "simpleProduct": {
-            "id": "123",
-            "name": "Smartphone",
-            "stockStatus": "IN_STOCK",
-            "stockQuantity": 100,
-            "lowStockAmount": 10,
-            "description": "Un smartphone de última generación",
-            "regularPrice": {
-              "amount": "699.00"
-            },
-            "image": {
-              "sourceUrl": "https://picsum.photos/id/1/5000/3269",
-              "altText": "Imagen de Smartphone",
-              "title": "Smartphone",
-              "cartSourceUrl": "https://picsum.photos/id/1/150/150",
-              "producCardSourceUrl": "https://picsum.photos/id/1/300/300"
-            },
-            "galleryImages": {
-              "nodes": [
-                {
-                  "sourceUrl": "https://picsum.photos/id/1/5000/3269",
-                  "databaseId": 1
-                }
-              ]
-            }
-          }
-        },
-        {
-          "name": "Laptop",
-          "slug": "laptop",
-          "type": "simple",
-          "databaseId": 124,
-          "id": "124",
-          "averageRating": 4,
-          "reviewCount": 10,
-          "terms": {
-            "slug": ["electronica"],
-            "name": ["Electrónica"]
-          },
+          "price": "€15.99",
+          "rawPrice": "15.99",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€21.00",
+          "rawRegularPrice": "21.00",
+          "salePrice": "€15.99",
+          "rawSalePrice": "15.99",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 40,
+          "lowStockAmount": 10,
+          "averageRating": "5",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 14,
+          "onSale": true,
+          "virtual": false,
           "image": {
             "sourceUrl": "https://picsum.photos/800/600?random=2",
-            "altText": "Laptop XYZ Pro",
+            "altText": "Pantalon de ejemplo",
             "cartSourceUrl": "https://picsum.photos/150/150?random=2",
             "producCardSourceUrl": "https://picsum.photos/300/300?random=2"
           },
-          "productCategories": {
+          "galleryImages": {
             "nodes": [
               {
-                "name": "Electrónica",
-                "slug": "electronica"
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Imagen de galería 1",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Remera de ejemplo",
+                "slug": "remera-de-ejemplo",
+                "price": "€10.00",
+                "rawPrice": "10.00",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4.5",
+            "edges": [
+              {
+                "rating": 5,
+                "node": {
+                  "content": "¡Excelente producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-04-10T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Juan Pérez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-juan.jpg"
+                      }
+                    }
+                  }
+                }
               }
             ]
           },
           "simpleProduct": {
-            "id": "124",
-            "name": "Laptop",
-            "description": "Una laptop potente para trabajo y juegos",
+            "name": "Pantalones de ejemplo",
+            "slug": "pantalones-de-ejemplo",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["indumentaria"],
+              "name": ["Indumentaria"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 30,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
             "regularPrice": {
-              "amount": "999.00"
+              "amount": "24.99"
             },
             "image": {
-              "sourceUrl": "https://picsum.photos/id/2/5000/3269",
-              "altText": "Imagen de Laptop",
-              "title": "Laptop",
-              "cartSourceUrl": "https://picsum.photos/id/2/150/150",
-              "producCardSourceUrl": "https://picsum.photos/id/2/300/300"
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
             },
             "galleryImages": {
               "nodes": [
                 {
-                  "sourceUrl": "https://picsum.photos/id/2/5000/3269",
-                  "databaseId": 2
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
                 }
               ]
             }
           }
         },
         {
-          "name": "Libro de Ciencia Ficción",
-          "slug": "libro-ciencia-ficcion",
-          "type": "simple",
-          "databaseId": 125,
-          "id": "125",
-          "averageRating": 4.8,
-          "reviewCount": 25,
-          "terms": {
-            "slug": ["libros"],
-            "name": ["Libros"]
+          "name": "Smartphone",
+          "type": "SIMPLE",
+          "databaseId": 123,
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "smartphone",
+          "sku": "EJP-003",
+          "description": "<p>Un Smartphone de última generacion de ejemplo.</p>",
+          "rawDescription": "Un Smartphone de última generacion de ejemplo.",
+          "shortDescription": "Un Smartphone de última generacion.",
+          "attributes": {
+            "nodes": [
+              {
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
+              }
+            ]
           },
+          "price": "€80.00",
+          "rawPrice": "€80.00",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€120.00",
+          "rawRegularPrice": "120.00",
+          "salePrice": "€80.00",
+          "rawSalePrice": "80.00",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 65,
+          "lowStockAmount": 10,
+          "averageRating": "4.8",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 32,
+          "onSale": true,
+          "virtual": false,
           "image": {
             "sourceUrl": "https://picsum.photos/800/600?random=3",
-            "altText": "Libro de Ciencia Ficción XYZ",
+            "altText": "Camiseta XYZ",
             "cartSourceUrl": "https://picsum.photos/150/150?random=3",
             "producCardSourceUrl": "https://picsum.photos/300/300?random=3"
           },
-          "productCategories": {
+          "galleryImages": {
             "nodes": [
               {
-                "name": "Libros",
-                "slug": "libros"
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Un Smartphone de ejemplo",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Remera de ejemplo",
+                "slug": "Remera-de-ejemplo",
+                "price": "€29.99",
+                "rawPrice": "29.99",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4.5",
+            "edges": [
+              {
+                "rating": 5,
+                "node": {
+                  "content": "¡Excelente producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-04-10T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Juan Pérez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-juan.jpg"
+                      }
+                    }
+                  }
+                }
               }
             ]
           },
           "simpleProduct": {
-            "id": "125",
-            "name": "Libro de Ciencia Ficción",
-            "description": "Un libro emocionante de ciencia ficción",
+            "name": "Ejemplo de Producto",
+            "slug": "ejemplo-de-producto",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["electronica"],
+              "name": ["Electrónica"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
             "regularPrice": {
-              "amount": "15.00"
+              "amount": "24.99"
             },
             "image": {
-              "sourceUrl": "https://picsum.photos/id/3/5000/3269",
-              "altText": "Imagen de Libro de Ciencia Ficción",
-              "title": "Libro de Ciencia Ficción",
-              "cartSourceUrl": "https://picsum.photos/id/3/150/150",
-              "producCardSourceUrl": "https://picsum.photos/id/3/300/300"
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
             },
             "galleryImages": {
               "nodes": [
                 {
-                  "sourceUrl": "https://picsum.photos/id/3/5000/3269",
-                  "databaseId": 3
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
                 }
               ]
             }
           }
         },
         {
-          "name": "Novela Romántica",
-          "slug": "novela-romantica",
-          "type": "simple",
-          "databaseId": 126,
-          "id": "126",
-          "averageRating": 4.2,
-          "reviewCount": 18,
-          "terms": {
-            "slug": ["libros"],
-            "name": ["Libros"]
+          "name": "Computadora de escritorio",
+          "type": "SIMPLE",
+          "databaseId": 123,
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "computadora-de-escritorio",
+          "sku": "EJP-004",
+          "description": "<p>Computadora de escritorio de ejemplo.</p>",
+          "rawDescription": "Computadora de escritorio de ejemplo.",
+          "shortDescription": "Computadora de escritorio.",
+          "attributes": {
+            "nodes": [
+              {
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
+              }
+            ]
           },
+          "price": "€150.00",
+          "rawPrice": "150.00",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€180.00",
+          "rawRegularPrice": "180.00",
+          "salePrice": "€150.00",
+          "rawSalePrice": "150.00",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 40,
+          "lowStockAmount": 10,
+          "averageRating": "4.5",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 25,
+          "onSale": true,
+          "virtual": false,
           "image": {
             "sourceUrl": "https://picsum.photos/800/600?random=4",
-            "altText": "Novela Romántica XYZ",
+            "altText": "Computadora de escritorio de ejemplo",
             "cartSourceUrl": "https://picsum.photos/150/150?random=4",
             "producCardSourceUrl": "https://picsum.photos/300/300?random=4"
           },
-          "productCategories": {
+          "galleryImages": {
             "nodes": [
               {
-                "name": "Libros",
-                "slug": "libros"
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Imagen de galería 1",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Smartphone",
+                "slug": "smartphone",
+                "price": "€80.00",
+                "rawPrice": "80.00",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4.5",
+            "edges": [
+              {
+                "rating": 5,
+                "node": {
+                  "content": "¡Excelente producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-04-10T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Juan Pérez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-juan.jpg"
+                      }
+                    }
+                  }
+                }
               }
             ]
           },
           "simpleProduct": {
-            "id": "126",
-            "name": "Novela Romántica",
-            "description": "Una novela romántica que te atrapará",
+            "name": "Ejemplo de Producto",
+            "slug": "ejemplo-de-producto",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["electronica"],
+              "name": ["Electrónica"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
             "regularPrice": {
-              "amount": "12.00"
+              "amount": "24.99"
             },
             "image": {
-              "sourceUrl": "https://picsum.photos/id/4/5000/3269",
-              "altText": "Imagen de Novela Romántica",
-              "title": "Novela Romántica",
-              "cartSourceUrl": "https://picsum.photos/id/4/150/150",
-              "producCardSourceUrl": "https://picsum.photos/id/4/300/300"
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
             },
             "galleryImages": {
               "nodes": [
                 {
-                  "sourceUrl": "https://picsum.photos/id/4/5000/3269",
-                  "databaseId": 4
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
                 }
               ]
             }
           }
         },
         {
-          "name": "Camiseta",
-          "slug": "camiseta",
-          "type": "simple",
-          "databaseId": 127,
-          "id": "127",
-          "averageRating": 4.7,
-          "reviewCount": 30,
-          "terms": {
-            "slug": ["ropa"],
-            "name": ["Ropa"]
+          "name": "Reloj de pulsera",
+          "type": "SIMPLE",
+          "databaseId": 123,
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "reloj-de-pulsera",
+          "sku": "EJP-005",
+          "description": "<p>Un reloj de pulsera de ejemplo.</p>",
+          "rawDescription": "Un reloj de pulsera de ejemplo.",
+          "shortDescription": "Un reloj de pulsera.",
+          "attributes": {
+            "nodes": [
+              {
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
+              }
+            ]
           },
+          "price": "€49.99",
+          "rawPrice": "49.99",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€150.00",
+          "rawRegularPrice": "150.00",
+          "salePrice": "€49.99",
+          "rawSalePrice": "49.99",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 100,
+          "lowStockAmount": 10,
+          "averageRating": "4.9",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 25,
+          "onSale": true,
+          "virtual": false,
           "image": {
             "sourceUrl": "https://picsum.photos/800/600?random=5",
-            "altText": "Camiseta XYZ",
+            "altText": "Un reloj de pulsera de ejemplo",
             "cartSourceUrl": "https://picsum.photos/150/150?random=5",
             "producCardSourceUrl": "https://picsum.photos/300/300?random=5"
           },
-          "productCategories": {
+          "galleryImages": {
             "nodes": [
               {
-                "name": "Ropa",
-                "slug": "ropa"
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Imagen de galería 1",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Computadora de escritorio",
+                "slug": "computadora-de-escritorio",
+                "price": "€29.99",
+                "rawPrice": "29.99",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4.5",
+            "edges": [
+              {
+                "rating": 5,
+                "node": {
+                  "content": "¡Excelente producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-04-10T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Juan Pérez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-juan.jpg"
+                      }
+                    }
+                  }
+                }
               }
             ]
           },
           "simpleProduct": {
-            "id": "127",
-            "name": "Camiseta",
-            "description": "Una camiseta cómoda y de alta calidad",
+            "name": "Ejemplo de Producto",
+            "slug": "ejemplo-de-producto",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["electronica"],
+              "name": ["Electrónica"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
             "regularPrice": {
-              "amount": "20.00"
+              "amount": "24.99"
             },
             "image": {
-              "sourceUrl": "https://picsum.photos/id/5/5000/3269",
-              "altText": "Imagen de Camiseta",
-              "title": "Camiseta",
-              "cartSourceUrl": "https://picsum.photos/id/5/150/150",
-              "producCardSourceUrl": "https://picsum.photos/id/5/300/300"
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
             },
             "galleryImages": {
               "nodes": [
                 {
-                  "sourceUrl": "https://picsum.photos/id/5/5000/3269",
-                  "databaseId": 5
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
                 }
               ]
             }
           }
         },
         {
-          "name": "Pantalones",
-          "slug": "pantalones",
-          "type": "simple",
-          "databaseId": 128,
-          "id": "128",
-          "averageRating": 4.3,
-          "reviewCount": 22,
-          "terms": {
-            "slug": ["ropa"],
-            "name": ["Ropa"]
+          "name": "Tablet de ejemplo",
+          "type": "SIMPLE",
+          "databaseId": 123,
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "tablet-de-ejemplo",
+          "sku": "EJP-006",
+          "description": "<p>Esta es una tablet de ejemplo.</p>",
+          "rawDescription": "Esta es una tablet de ejemplo.",
+          "shortDescription": "Esta es una tablet.",
+          "attributes": {
+            "nodes": [
+              {
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
+              }
+            ]
           },
+          "price": "€50.00",
+          "rawPrice": "50.00",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€50.00",
+          "rawRegularPrice": "50.00",
+          "salePrice": "€50.00",
+          "rawSalePrice": "50.00",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 4,
+          "lowStockAmount": 10,
+          "averageRating": "3.3",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 14,
+          "onSale": true,
+          "virtual": false,
           "image": {
             "sourceUrl": "https://picsum.photos/800/600?random=6",
-            "altText": "Pantalones XYZ",
+            "altText": "Camiseta XYZ",
             "cartSourceUrl": "https://picsum.photos/150/150?random=6",
             "producCardSourceUrl": "https://picsum.photos/300/300?random=6"
           },
-          "productCategories": {
+          "galleryImages": {
             "nodes": [
               {
-                "name": "Ropa",
-                "slug": "ropa"
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Imagen de galería 1",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Reloj de pulsera",
+                "slug": "reloj-de-pulsera",
+                "price": "€29.99",
+                "rawPrice": "29.99",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4.5",
+            "edges": [
+              {
+                "rating": 5,
+                "node": {
+                  "content": "¡Excelente producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-04-10T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Juan Pérez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-juan.jpg"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "rating": 3,
+                "node": {
+                  "content": "Tuve algunas dificultades con el vendedor",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-12-22T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Maria Ines",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-maria.jpg"
+                      }
+                    }
+                  }
+                }
               }
             ]
           },
           "simpleProduct": {
-            "id": "128",
-            "name": "Pantalones",
-            "description": "Pantalones elegantes y cómodos",
+            "name": "Ejemplo de Producto",
+            "slug": "ejemplo-de-producto",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["electronica"],
+              "name": ["Electrónica"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
             "regularPrice": {
-              "amount": "35.00"
+              "amount": "24.99"
             },
             "image": {
-              "sourceUrl": "https://picsum.photos/id/6/5000/3269",
-              "altText": "Imagen de Pantalones",
-              "title": "Pantalones",
-              "cartSourceUrl": "https://picsum.photos/id/6/150/150",
-              "producCardSourceUrl": "https://picsum.photos/id/6/300/300"
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
             },
             "galleryImages": {
               "nodes": [
                 {
-                  "sourceUrl": "https://picsum.photos/id/6/5000/3269",
-                  "databaseId": 6
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
                 }
               ]
             }
           }
-        }
+        },
+        {
+          "name": "Campera de cuero",
+          "type": "SIMPLE",
+          "databaseId": 123,
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "campera-de-cuero",
+          "sku": "EJP-007",
+          "description": "<p>Una campera de cuero de prueba.</p>",
+          "rawDescription": "Una campera de cuero de prueba.",
+          "shortDescription": "Campera de cuero.",
+          "attributes": {
+            "nodes": [
+              {
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "price": "€50.00",
+          "rawPrice": "50.00",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€70.99",
+          "rawRegularPrice": "70.99",
+          "salePrice": "€50.00",
+          "rawSalePrice": "50.00",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 48,
+          "lowStockAmount": 10,
+          "averageRating": "5",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 12,
+          "onSale": true,
+          "virtual": false,
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=7",
+            "altText": "Campera de cuero de ejemplo",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=7",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=7"
+          },
+          "galleryImages": {
+            "nodes": [
+              {
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Imagen de galería 1",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Pantalones de ejemplo",
+                "slug": "pantalones-de-ejemplo",
+                "price": "€29.99",
+                "rawPrice": "29.99",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4.5",
+            "edges": [
+              {
+                "rating": 4,
+                "node": {
+                  "content": "¡Muy buena compra, muy contento con el producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2024-05-20T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Hernan Gomez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-hernan.jpg"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "rating": 5,
+                "node": {
+                  "content": "¡Me encantó! Estoy muy feliz con la campera",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2024-04-29T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Mariano Lopez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-mariano.jpg"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "rating": 5,
+                "node": {
+                  "content": "Solo puedo decir una cosa: ¡Excelente!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2024-05-20T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Luis Perez",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-luis.jpg"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "simpleProduct": {
+            "name": "Ejemplo de Producto",
+            "slug": "ejemplo-de-producto",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["electronica"],
+              "name": ["Electrónica"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
+            "regularPrice": {
+              "amount": "24.99"
+            },
+            "image": {
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Zapatillas de correr",
+          "type": "SIMPLE",
+          "databaseId": 123,
+          "id": "cHJvZHVjdDoxMjM=",
+          "metaData": [
+            {
+              "id": "1",
+              "key": "color",
+              "value": "rojo"
+            }
+          ],
+          "slug": "zapatillas-de-correr",
+          "sku": "EJP-008",
+          "description": "<p>Zapatillas de correr de ejemplo.</p>",
+          "rawDescription": "Zapatillas de correr de ejemplo.",
+          "shortDescription": "Zapatillas de correr.",
+          "attributes": {
+            "nodes": [
+              {
+                "variation": false,
+                "name": "Tamaño",
+                "id": "dGVybTo0",
+                "options": ["Pequeño", "Mediano", "Grande"],
+                "label": "Tamaño",
+                "scope": "GLOBAL",
+                "slug": "tamano",
+                "terms": {
+                  "nodes": [
+                    {
+                      "name": "Pequeño",
+                      "slug": "pequeno",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 10
+                    },
+                    {
+                      "name": "Mediano",
+                      "slug": "mediano",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 11
+                    },
+                    {
+                      "name": "Grande",
+                      "slug": "grande",
+                      "taxonomyName": "pa_tamano",
+                      "databaseId": 12
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "price": "€40.99",
+          "rawPrice": "40.99",
+          "date": "2023-04-15T10:00:00",
+          "regularPrice": "€85.00",
+          "rawRegularPrice": "85.00",
+          "salePrice": "€40.99",
+          "rawSalePrice": "40.99",
+          "stockStatus": "IN_STOCK",
+          "stockQuantity": 100,
+          "lowStockAmount": 10,
+          "averageRating": "4.5",
+          "weight": "0.5",
+          "length": "10",
+          "width": "5",
+          "height": "2",
+          "reviewCount": 25,
+          "onSale": true,
+          "virtual": false,
+          "image": {
+            "sourceUrl": "https://picsum.photos/800/600?random=8",
+            "altText": "Zapatillas de correr de ejemplo",
+            "cartSourceUrl": "https://picsum.photos/150/150?random=8",
+            "producCardSourceUrl": "https://picsum.photos/300/300?random=8"
+          },
+          "galleryImages": {
+            "nodes": [
+              {
+                "id": "aW1hZ2U6NDU3",
+                "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                "altText": "Imagen de galería 1",
+                "databaseId": 457
+              },
+              {
+                "id": "aW1hZ2U6NDU4",
+                "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                "altText": "Imagen de galería 2",
+                "databaseId": 458
+              }
+            ]
+          },
+          "related": {
+            "nodes": [
+              {
+                "name": "Campera de cuero",
+                "slug": "campera-de-cuero",
+                "price": "€29.99",
+                "rawPrice": "29.99",
+                "stockStatus": "IN_STOCK",
+                "image": {
+                  "id": "aW1hZ2U6NDU5",
+                  "sourceUrl": "https://ejemplo.com/producto-relacionado-1.jpg",
+                  "altText": "Imagen del producto relacionado 1"
+                }
+              }
+            ]
+          },
+          "reviews": {
+            "averageRating": "4",
+            "edges": [
+              {
+                "rating": 4,
+                "node": {
+                  "content": "¡Muy buen producto!",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2023-04-10T15:30:00",
+                  "author": {
+                    "node": {
+                      "name": "Mario Zapata",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-mario.jpg"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "rating": 4,
+                "node": {
+                  "content": "Super cómodas, muy recomendables",
+                  "id": "Y29tbWVudDoxMDA=",
+                  "date": "2024-08-24T19:45:00",
+                  "author": {
+                    "node": {
+                      "name": "Cristian Marx",
+                      "avatar": {
+                        "url": "https://ejemplo.com/avatar-mario.jpg"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "simpleProduct": {
+            "name": "Ejemplo de Producto",
+            "slug": "ejemplo-de-producto",
+            "type": "SIMPLE",
+            "databaseId": 123,
+            "id": "cHJvZHVjdDoxMjM=",
+            "averageRating": "4.5",
+            "reviewCount": 25,
+            "terms": {
+              "slug": ["ropa"],
+              "name": ["Ropa"]
+            },
+            "stockStatus": "IN_STOCK",
+            "stockQuantity": 100,
+            "lowStockAmount": 10,
+            "description": "<p>Descripción detallada del producto.</p>",
+            "regularPrice": {
+              "amount": "24.99"
+            },
+            "image": {
+              "sourceUrl": "https://ejemplo.com/imagen-producto.jpg",
+              "altText": "Imagen del producto",
+              "cartSourceUrl": "https://ejemplo.com/imagen-producto-thumbnail.jpg",
+              "producCardSourceUrl": "https://ejemplo.com/imagen-producto-woocommerce-thumbnail.jpg"
+            },
+            "galleryImages": {
+              "nodes": [
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-1.jpg",
+                  "databaseId": 457
+                },
+                {
+                  "sourceUrl": "https://ejemplo.com/galeria-2.jpg",
+                  "databaseId": 458
+                }
+              ]
+            },
+            "productCategories": {
+              "nodes": [
+                {
+                  "name": "Electrónica",
+                  "slug": "electronica"
+                }
+              ]
+            }
+          }
+        }        
       ]
     },
     "productCategories": {
